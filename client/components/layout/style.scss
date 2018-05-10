@@ -4,13 +4,13 @@
 @include Rubik-Regular();
 
 html {
-
+  scroll-behavior: smooth
 }
 
 body {
-  font: 14px "Rubik-Regular", Helvetica, Arial, sans-serif;
-  color: #595858;
-  background-color: rgb(245,248,250);
+  // font: 14px "Rubik-Regular", Helvetica, Arial, sans-serif;
+  font-family: 'Open Sans', sans-serif;
+  background-color: white;
   margin: 0;
 }
 
@@ -34,7 +34,7 @@ body {
     margin: 0 0 0 2.5rem;
   }
   .shift-content {
-    background-color: rgba(0,0,0,0.45);
+    background-color: red;
     opacity: 0.8;
   }
 }
@@ -45,6 +45,6 @@ and (max-width: 770px) {
     margin: 0;
   }
   .shift-content {
-    background-color: rgba(0,0,0,0.45);
+    background-color: black;
   }
 }

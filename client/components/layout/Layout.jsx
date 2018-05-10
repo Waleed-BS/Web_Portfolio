@@ -1,12 +1,14 @@
 import React from 'react';
 import { connect } from 'react-redux';
+
+/* imported components */
 import NavBar from '../nav/NavBar.jsx';
 import NavHam from '../nav/NavHam.jsx'
+import Index from '../main/Index.jsx';
 
-
-// import Footer from '../Footer/Footer';
-// import Index from '../main/Index.jsx';
+/* imported actions */
 import { setHover } from '../../actions/Nav_Actions.jsx';
+
 import './style.scss';
 
 class Layout extends React.Component {
@@ -18,20 +20,19 @@ class Layout extends React.Component {
   render() {
     return (
       <div className="app-container">
-        <header>
+        <nav>
           <NavHam />
-        </header>
-        <div className="app-body">
           <NavBar />
+        </nav>
+        <div className="app-body">
           <div
             className={`app-content${this.props.isHovering ? ' shift-content' : ''}`}
             onClick={this.handleClick}
           >
-            {/* <Index /> */}
+            <Index />
           </div>
         </div>
       </div>
-
     );
   }
 }

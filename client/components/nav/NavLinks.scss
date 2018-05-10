@@ -8,6 +8,12 @@
   font-family: "Lato","Helvetica Neue","Helvetica",sans-serif;
   font-weight: bold;
 
+  img {
+    height: 180px;
+    width: 180px;
+    margin-left: 12px;
+  }
+
   ul {
     list-style: none;
     padding: 0px;
@@ -26,21 +32,21 @@
 
     a {
       text-decoration: none;
-      color: #44b1e4;
+      color: #ce3f3f;
       display: block;
       padding: 0 0.5rem 0 0.5rem;
 
       svg {
         width: 1.35rem;
         height: 1.35rem;
-        margin: 1rem 0.25rem 1rem 0.25rem;
+        margin: 1.0rem 2.25rem 1rem 0.25rem;
       }
 
       span {
         margin-left: 0.5rem;
         position: absolute;
         left: 2.5rem;
-        top: 1.25rem;
+        top: 1.19rem;
         font-size: 0.9rem;
         color: #d7e3ed;
       }
@@ -49,20 +55,45 @@
 }
 
 @media only screen and (max-width: 1700px){
+  .NavLinks ul {
+    img {
+      margin: auto auto;
+      height: 160px;
+      width: 160px;
+    }
+  }
   .NavLinks ul li a {
     span {
       left: 2rem;
-      top: 1.35rem;
+      top: 1.19rem;
       font-size: 0.8rem;
     }
     svg {
       margin: 1rem 0 1rem 0;
+    }
+
+  }
+}
+
+@media only screen and (max-width: 1280px) {
+  .NavLinks {
+    ul {
+      img {
+        display: none;
+      }
     }
   }
 }
 
 @media only screen and (max-width: 770px) {
   .NavLinks {
+    ul {
+      img {
+        display: block;
+        height: 140px;
+        width: 140px;
+      }
+    }
     .side-contacts {
       display: none;
     }

@@ -20,9 +20,9 @@ class NavBar extends React.Component {
 
   render() {
     return (
-      <nav className={`NavBar${this.props.isHovering ? ' hovering' : ''}`} onMouseEnter={this.handleHoverTrue} onMouseLeave={this.handleHoverFalse}>
+      <div className={`NavBar${this.props.isHovering ? ' hovering' : ''}`} onMouseEnter={this.handleHoverTrue} onMouseLeave={this.handleHoverFalse}>
         <NavLinks />
-      </nav>
+      </div>
     );
   }
 };

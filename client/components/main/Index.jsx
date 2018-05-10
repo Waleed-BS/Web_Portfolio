@@ -1,21 +1,23 @@
-/*
-    ./client/components/main/Index.jsx
-*/
+/* ./client/components/main/Index.jsx */
 import React from 'react';
 import { connect } from 'react-redux';
 
-const Index = () => {
-  // const componentLocation = (event) => {
-  //   alert(`We are in in ${event.target.value}`);
-  // };
+/* components */
+import About from '../sections/About.jsx';
+import Skills from '../sections/Skills.jsx';
+import Projects from '../sections/Projects.jsx';
+import Education from '../sections/Education.jsx';
+import './Index.scss';
 
-  return (
-    <div className="Index">
+const Index = () => (
 
-        {/* <NavBar /> */}
+  <div className="Index">
+    <About />
+    <Skills />
+    <Projects />
+    <Education />
+  </div>
 
-    </div>
-  );
-};
+);
 
 export default connect(null, null)(Index);

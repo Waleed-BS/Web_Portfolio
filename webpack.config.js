@@ -3,25 +3,40 @@
 */
 
 const path = require('path');
-/* ~~~~~ html-webpack-plugin ~~~~~~ */
+const webpack = require('webpack');
+
+/* ~~~~~ plugins ~~~~~~ */
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+
 const HtmlWebpackPluginConfig = new HtmlWebpackPlugin({
   /* set our skeleton HTML as the template */
   template: './client/index.html',
   /* filename refers to the name of the HTML that the plugin will generate */
   filename: 'index.html',
   /* add any JavaScript into the bottom of the page, just before the closing body tag. */
-  inject: 'body'
-})
+  inject: 'body',
+});
+
+const HotModuleReplacementPlugin = new webpack.HotModuleReplacementPlugin()
 /* ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ */
 
 module.exports = {
+  devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    compress: true,
+    port: 3000,
+    historyApiFallback: true,
+  },
   /* bundler starts the bundling process */
-  entry: './client/index.js',
+  entry: [
+    './client/index.js',
+    'webpack-hot-middleware/client?path=/__webpack_hmr&timeout=20000&reload=true',
+  ],
   /* where the bundled Javascript code is to be saved. */
   output: {
     path: path.resolve('dist'),
-    filename: 'index_bundle.js'
+    filename: 'index_bundle.js',
+    publicPath: '/',
   },
   module: {
     /* loaders: transformations that are applied on a file */
@@ -69,10 +84,11 @@ module.exports = {
             },
           },
         ],
-
       },
-
     ],
   },
-  plugins: [HtmlWebpackPluginConfig],
+  plugins: [
+    HtmlWebpackPluginConfig,
+    HotModuleReplacementPlugin,
+  ],
 };
