@@ -31,7 +31,6 @@ This website is my personal portfolio for displaying my accomplishments and my c
 ### Install Dependencies: 
 
 ```
-$ git clone https://github.com/Waleed-BS/Web_Portfolio.git
 $ cd Web_Portfolio
 $ npm install
 ```
