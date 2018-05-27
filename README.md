@@ -2,50 +2,59 @@
 
 This website is my personal portfolio for displaying my accomplishments and my contact details.
 
-## Some Technologies Used:
+Technlogies used for this website including:
 
-- ES6 
+* [**ES6**](http://es6-features.org/#Constants)
 
-- Express
+* [**Express**](https://expressjs.com/)
 
-- React
+* [**React**](https://reactjs.org/)
 
-- Redux & Redux-DevTools
+* [**Redux**](https://redux.js.org/) with [**Redux-DevTools**](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
 
-- Redux-Thunk
+* Redux-Thunk
 
-- Babel 
+* [**Babel**](https://babeljs.io/)
 
-- Sass
+* [**Sass**](https://sass-lang.com/)
 
-- Webpack
+* [**Webpack**](https://webpack.js.org/)
 
-- Webpack-dev-middleware
+* Webpack-dev-middleware
 
-- Webpack-hot-middleware
+* Webpack-hot-middleware
 
-- ESLint (airbnb config)
+* ESLint (airbnb config)
 
-## Usage 
+## Documentation
 
-### Install Dependencies: 
+### Prerequisites
+
+You only need [**Node.js**](https://nodejs.org/en/) installed.
+
+### Install 
+
+Git clone this repository then change your current directory. 
 
 ```
-$ cd Web_Portfolio
-$ npm install
+$ git clone https://github.com/Waleed-BS/react-setup-environment
+$ cd react-setup-environment
 ```
 
-### Start Express Server In Development Environment: 
+### Run
+
+Start express server In development environment: 
+
 ```
 $ npm run dev
 ```
-
-### Start Express Server In Production Environment
+Start express server in production environment
 
 ```
 $ npm start
 ```
-or 
+
+Or build and run separately.    
 
 ```
 $ npm run build
