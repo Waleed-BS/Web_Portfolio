@@ -2,7 +2,7 @@
 
 This website is my personal portfolio for displaying my accomplishments and my contact details.
 
-Technlogies used for this website including:
+Technologies used for this website including:
 
 * [**ES6**](http://es6-features.org/#Constants)
 
