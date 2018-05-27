@@ -60,3 +60,6 @@ Or build and run separately.
 $ npm run build
 $ node app.js
 ```
+
+### License
+The contents of this repository are covered under the [MIT License](https://github.com/Waleed-BS/Web_Portfolio/blob/master/LICENSE).
