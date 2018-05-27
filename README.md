@@ -37,8 +37,8 @@ You only need [**Node.js**](https://nodejs.org/en/) installed.
 Git clone this repository then change your current directory. 
 
 ```
-$ git clone https://github.com/Waleed-BS/react-setup-environment
-$ cd react-setup-environment
+$ git clone https://github.com/Waleed-BS/Web_Portfolio
+$ cd Web_Portfolio
 ```
 
 ### Run
