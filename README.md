@@ -40,6 +40,11 @@ Git clone this repository then change your current directory.
 $ git clone https://github.com/Waleed-BS/Web_Portfolio
 $ cd Web_Portfolio
 ```
+Install dependencies. 
+
+```
+$ npm install
+```
 
 ### Run
 
