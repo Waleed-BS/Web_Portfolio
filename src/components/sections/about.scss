@@ -1,0 +1,56 @@
+#About {
+  p {
+    font-size: 1.2em;
+  }
+
+  background: black url('../../assets/images/textures/noisy_grid.png');
+
+  .wrapper {
+    display: flex;
+    color: white;
+
+    .col {
+      display: flex;
+      flex-direction: column;
+      max-width: 400px;
+      justify-content: center;
+      margin: 0 40px;
+      .profile {
+        height: 300px;
+      }
+    }
+  }
+
+}
+
+// @media only screen and (max-width: 1700px) {
+//   #About {
+//   
+//   }
+// }
+
+// @media only screen and (max-width: 1280px) {
+//   #About {
+//     
+//   }
+// }
+
+@media only screen and (max-width: 770px) {
+  #About {
+    p {
+      font-size: 1.0rem;
+    }
+    .wrapper {
+      display: block;
+      .col {
+        text-align: center;
+        .profile {
+          margin: 0;
+          align-self: center;
+          height: 150px;
+        }
+      }
+
+    }
+  }
+}
