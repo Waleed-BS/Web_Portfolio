@@ -34,7 +34,7 @@
   animation: radial-shadow-pulse 1.2s infinite, radial-zoom-pulse 1.2s infinite;
   transform: scale(1);
 
-  &:hover {
+  &:active {
     animation-name: none;
   }
 }

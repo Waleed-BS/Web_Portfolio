@@ -3,22 +3,18 @@ import { connect } from 'react-redux'
 import NavLinks from './NavLinks'
 
 class NavBar extends React.Component {
-  handleMouseEnter = () => {
-    this.props.setHover(true)
-  }
 
-  handleMouseLeave = () => {
-    this.props.setHover(false)
+  componentDidMount() {
+    // fixes ios onMouseLeave problem
+    window.addEventListener('touchend', () => this.props.setHover(false))
   }
 
   render() {
     return (
       <nav
-        onMouseEnter={this.handleMouseEnter}
-        onMouseLeave={this.handleMouseLeave}
-        className={`navbar ${
-          this.props.isHovered ? 'navbar--hovered' : 'navbar--not-hovered'
-        }`}
+        className={`navbar ${this.props.isHovered ? 'navbar--hovered' : ''}`}
+        onMouseEnter={() => this.props.setHover(true)}
+        onMouseLeave={() => this.props.setHover(false)}
       >
         <NavLinks />
       </nav>
