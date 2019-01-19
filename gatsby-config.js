@@ -1,10 +1,19 @@
+const autoprefixer = require('autoprefixer');
+
 module.exports = {
   siteMetadata: {
     title: 'Web Portfolio',
   },
   plugins: [
     'gatsby-plugin-react-helmet',
-    'gatsby-plugin-sass',
+    // 'gatsby-plugin-sass',
+    {
+      resolve: `gatsby-plugin-postcss-sass`,
+      options: {
+        postCssPlugins: [autoprefixer()],
+        precision: 8, // SASS default: 5
+      },
+    },
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
