@@ -1,0 +1,38 @@
+/*
+todo:  
+@import "variables"
+@import "functions"
+@import "mixins" 
+*/
+@import "settings/screen-sizes";
+@import "settings/colors";
+@import "settings/stacks";
+@import "settings/typography";
+
+@import "animations/animations";
+
+@import "modifiers/blur";
+@import "modifiers/opacity";
+@import "modifiers/headline-focus-animation";
+@import "modifiers/fade-in";
+
+/* layout (parent) component */ 
+@import "components/layout";
+/* web pages (children) components */ 
+@import "pages/index";
+@import "pages/toolbox";
+@import "pages/projects";
+@import "pages/education";
+@import "pages/experience";
+
+/* re-usable components */
+@import "components/info-button";
+@import "components/navbar";
+@import "components/navlinks";
+@import "components/navham";
+@import "components/remark-screen";
+@import "components/toolbox-list";
+@import "components/toolbox-popover";
+@import "components/avatar";
+@import "components/tech-icon";
+@import "components/footer";

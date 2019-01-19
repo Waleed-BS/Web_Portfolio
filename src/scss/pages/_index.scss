@@ -1,0 +1,136 @@
+.about {
+  // animate when navigation is hovered or opened or closed
+
+  &__md-heading {
+    font-weight: 300;
+    font-size: 2em;
+    letter-spacing: -0.03em;
+
+    &--hidden {
+      opacity: 0;
+      transform: translate(0px, -30px);
+    }
+
+    &__span--blink-animation {
+      animation: blink 1s infinite;
+    }
+
+  }
+
+  
+  &__md-heading--inline {
+    display: inline;
+  }
+
+  &__bg-heading {
+    margin: 0;
+    padding-bottom: 1.3em;
+    font-weight: 700;
+    font-size: 3em;
+    letter-spacing: -0.05em;
+    // line-height: 0.95;
+    color: $text-bg-color;
+
+    &--hidden {
+      opacity: 0;
+    }
+    &--visible {
+      /* test animation */
+      @include fadeInAnimation2;
+  
+    }
+  }
+
+  .about-title {
+    // font-size: 3rem;
+    margin: 0 0 4rem 0;
+    text-align: center;
+    width: 100%;
+  }
+  .inner-container {
+    // flex-grow: 1;
+    // max-width: 40%;
+    // margin: 1rem;
+    // padding: 1rem;
+    // background-color: #ececec;
+    // border-radius: 1rem;
+    // box-shadow: 0.2rem 0.2rem 0.2rem #888888;
+    .subsection-title {
+      // text-align: center;
+      // background-color: #9c95ce;
+      // color: #ffffff;
+      // border-top-right-radius: 1rem;
+      // border-top-left-radius: 1rem;
+      // margin: -1rem -1rem 1rem -1rem;
+      // padding: 1rem;
+      // width: 100%;
+      // font-size: 2rem;
+    }
+  }
+}
+
+@media screen and (min-width: $media-width-XS) {
+  .about {
+    // margin-right: 5em;
+
+    &__md-heading {
+      // font-size: 1.5em;
+    }
+
+    &__bg-heading {
+      line-height: 0.95em;
+      // font-size: 2.8em;
+    }
+  }
+}
+
+@media screen and (min-width: $media-width-S) {
+  .about {
+    &__md-heading {
+      // font-size: 1.7em;
+    }
+
+    &__bg-heading {
+      line-height: 0.95em;
+      // font-size: 3.3em;
+    }
+  }
+}
+
+@media screen and (min-width: $media-width-M) {
+  .about {
+    &__bg-heading {
+      // font-size: 3.75em;
+    }
+  }
+}
+
+@media screen and (min-width: $media-width-L) {
+  .about {
+    &__bg-heading {
+      // font-size: 4em;
+    }
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .content-box {
+    // padding: 0em;
+    margin-right: 6em; 
+    // margin-left: 2em;
+    // width: 61vw;
+  }
+}

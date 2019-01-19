@@ -1,0 +1,218 @@
+// // to not let remark screen increase the view height 
+#___gatsby {
+  position: relative;
+  overflow: hidden;
+}
+
+.remark-screen {
+  background: #262626;
+  padding: 2em 2.5em 0 1.6em;
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  right: -120%;
+  min-height: 100vh;
+  // max-width: 41%;
+  transition: 0.5s ease-out;
+  transition-timing-function: cubibezier(0.23, 1, 0.32, 1);
+  top: 0;
+  z-index: $remark-screen-z-index;
+}
+
+.remark-screen--is-active {
+  right: 0px;
+}
+
+.remark-screen__message {
+  color: white;
+  // font-size: 0.9em;
+  // font-family: Exo, sans-serif;
+  font-weight: 300;
+  max-width: 30em;
+
+  p {
+    line-height: 1.4;
+    margin: 0 0 0.8em;
+
+    &:first-child {
+      // font-size: 1.2em;
+      line-height: 1.2;
+      margin: 0 0 1em;
+
+      b {
+        // font-size: 1.4em;
+        line-height: 1.3em;
+      }
+    }
+
+    &:last-child {
+      // font-size: 0.85em;
+      margin: 2em 0 1em;
+    }
+  }
+
+  span {
+    //font-size: 1.1em;
+    color: $first-color;
+    font-weight: 700;
+  }
+
+}
+
+.remark-screen__links {
+  margin: 1em 0 0 0;
+  max-width: 22em;
+  display: flex;
+  // flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.remark-screen__link {
+  background: $second-color;
+  margin: 0 1em 0.7em 0;
+  padding: 0.3em 0.3em; 
+  border: none;
+  border-radius: 0.2em;
+  display: inline-block;
+  // color: white;
+  min-width: 8em;
+  font-weight: bold;
+  text-transform: capitalize;
+  
+  &:hover {
+    border: none;
+    background-color: darken($second-color, 8%); 
+    transition: background-color .3s;
+  }
+  
+  svg {
+    margin-right: 0.3em;
+    color: $first-color;
+  }
+}
+
+.remark-screen__bg { // needs a better class name
+  background: #262626;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  width: 100px;
+  height: 100vh;
+  transform: skewX(-2deg);
+  z-index: $remark-screen-bg-z-index;
+}
+
+.remark-screen-overlay {
+  background: none;
+  left: 0;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  z-index: $remark-screen-overlay-z-index;
+}
+
+@media screen and (min-width: $media-width-S) {
+  
+}
+
+@media screen and (min-width: $media-width-M) {
+  .remark-screen {
+    padding: 5em 6em 5em 4em;
+  }
+  .remark-screen__message {
+    // font-size: 1.1em;
+    max-width: 22em;
+  }
+}
+
+@media screen and (min-width: $media-width-L) {
+  .remark-screen {
+    padding: 5em 6em 5em 4em;
+  }
+  .remark-screen__message {
+    // font-size: 1.2em;
+    max-width: 22em;
+  }
+}
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  //CSS
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .remark-screen {
+    // padding: 2.5em 2.5em 0 1.8em;
+    max-width: 30em;
+    padding: 3em 3em;
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+ 
+  
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .remark-screen {
+    // padding: 2.5em 2.5em 0 1.8em;
+    max-width: 18em;
+  }
+  .remark-screen__message {
+    // font-size: 0.8em;
+    // max-width: 40vw;
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .remark-screen {
+    // padding: 2.5em 2.5em 0 1.8em;
+    max-width: 18em;
+    padding: 4em 0em;
+  }
+  .remark-screen__message {
+    // font-size: 0.8em
+    margin-top: 4em;
+    padding: .5em;
+    // max-width: 40vw;
+  }
+}

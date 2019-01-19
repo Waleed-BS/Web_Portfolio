@@ -1,17 +1,21 @@
 {
   "name": "web_portfolio",
   "description": "This website is my personal portfolio for displaying my accomplishments and my contact details.",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "author": "Waleed Binselim <waleed-bs@live.com>",
   "dependencies": {
-    "gatsby": "^1.9.247",
+    "gatsby": "^1.9.279",
     "gatsby-link": "^1.6.40",
+    "gatsby-plugin-manifest": "^1.0.17",
+    "gatsby-plugin-offline": "^1.0.18",
     "gatsby-plugin-react-helmet": "^2.0.10",
     "gatsby-plugin-sass": "^1.0.26",
     "react-helmet": "^5.2.0",
     "react-icons": "^2.2.7",
+    "react-obfuscate": "^2.2.0",
     "react-redux": "^5.0.7",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "typeface-exo-2": "0.0.54"
   },
   "keywords": [
     "gatsby"
@@ -20,6 +24,7 @@
   "scripts": {
     "build": "gatsby build",
     "develop": "gatsby develop",
+    "devhost": "gatsby develop --host 0.0.0.0",
     "format": "prettier --write \"src/**/*.js\"",
     "test": "echo \"Error: no test specified\" && exit 1"
   },

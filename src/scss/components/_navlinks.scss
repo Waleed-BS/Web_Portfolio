@@ -1,0 +1,215 @@
+.logo {
+  // size of image
+  &--size {
+    // height: 150px;
+    // width: 150px;
+    height: 100%;
+    width: 100%;
+  }
+}
+
+.navlinks {
+  height: 100%; // container of all links takes full height of page
+  justify-content: space-between; // top and bottom links spaced between
+  // enables a flex context to top and bottom links
+  &--flex-container {
+    display: flex;
+  }
+  // direction of all links is top to bottom
+  &--flex-column {
+    flex-direction: column;
+  }
+
+  &__list {
+    padding: 0px; // because ul element start with "padding-start: 40px"
+    // margin-top: 0;
+    list-style: none;
+    &__item {
+      font-size: .9em;
+      // all of these flex modifiers are for the item of the logo (1st item)
+      &--flex-container {
+        display: flex;
+      }
+      &--flex-column {
+        flex-direction: column;
+      }
+      &--flex-center {
+        align-items: center;
+      }
+
+      cursor: pointer;
+      // width: 100%;
+      // align-self: flex-start;
+      // white-space: nowrap;
+
+      &:hover,
+      &--active {
+        background-color: #3f3f3f;
+        transition: 0.2s ease-in;
+      }
+
+      &__link {
+        border: none; // remove border caused by typography
+        display: block; // give the link the full width of its container
+        padding: 1.1rem 0; // (padding works correctly only when display set to block)
+        text-decoration: none;
+        color: $navlinks-text-color;
+
+        &:hover {
+          border: none; // remove border caused by typography
+        }
+
+        &__section-name {
+          position: absolute; // so section name doesn't change its position when navbar gets smaller
+          margin-top: 1px; // to align it next to icons
+          margin-left: 10px; // margin away from icons
+          &--bold {
+            font-weight: bold;
+          }
+        }
+
+        svg {
+          color: $first-color;
+          margin-left: 0.6rem;
+          height: 1.35rem;
+          width: 1.35rem;
+        }
+      } // end of link
+    } // end of item
+  } // end of list
+} // end of navlinks
+
+@media only screen and (max-width: 1700px) {
+  .navlinks__list {
+    img {
+      // margin: auto auto;
+      // height: 160px;
+      // width: 160px;
+    }
+  }
+  .navlinks__list__item__link {
+    span {
+      // left: 2rem;
+      // top: 1.19rem;
+      // font-size: 0.8rem;
+    }
+    svg {
+      // margin: 1rem 0 1rem 0;
+    }
+  }
+}
+
+// @media only screen and (max-width: 1280px) {
+//   .navlinks {
+//     &:hover {
+//       .navlinks__list__item__link__section-name {
+//         display: initial;
+//       }
+//     }
+//     // hide logo
+//     .logo {
+//       // display: none;
+//     }
+//     &__list {
+//       &__item__link {
+//         // margin-left: 2rem;
+
+//         &__section-name {
+//           // display: none;
+//           :hover {
+//             display: unset;
+//           }
+//         }
+//         svg {
+//           // width: 100%;
+//           // margin: 0;
+//         }
+//       }
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 770px) {
+//   .navlinks {
+//     // ul {
+//     //   img {
+//     //     display: block;
+//     //     height: 140px;
+//     //     width: 140px;
+//     //   }
+//     // }
+//     .bottom-links-list {
+//       // display: none;
+//     }
+//   }
+// }
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .navlinks {
+    // ul {
+    //   img {
+    //     display: block;
+    //     height: 140px;
+    //     width: 140px;
+    //   }
+    // }
+    .bottom-links-list {
+      display: none;
+    }
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .bottom-links-list {
+    display: none;
+  }
+}
+
+

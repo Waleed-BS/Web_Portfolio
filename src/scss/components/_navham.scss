@@ -1,0 +1,185 @@
+.navham {
+  visibility: hidden; // hide it if screen's width > 770px
+  background-color: rgb(38, 38, 38);
+  position: fixed;
+  top: 0;
+  height: 45px;
+  width: 100vw;
+  z-index: $navham-z-index;
+  transition: filter 0.5s, opacity 0.5s;
+
+  &--flex-container {
+    display: flex;
+    justify-content: space-between; // space between ham menu and contact links
+    align-items: center;
+  }
+
+  &__anchor {
+    border: none; // remove border caused by typography
+    margin: 0.55rem;
+    padding: 10px 35px 16px 0px;
+    cursor: pointer;
+
+    &:hover {
+      border-bottom-style: none; // remove border caused by typography
+    }
+
+    // creating hamburger with 3 parallel horizontal lines
+    // before and after pseudo-elements for top and bottom lines
+    span,
+    span:before,
+    span:after {
+      position: absolute;
+      background: $white-color;
+      height: 4px;
+      width: 27px;
+      border-radius: 1px;
+      content: ''; // to insert content before and after the element
+      transition: all 300ms ease-in-out;
+      // display: block;
+      // cursor: pointer;
+    }
+
+    // positioning the two lines
+    span:before {
+      top: -10px;
+    }
+    span:after {
+      bottom: -10px;
+    }
+
+    // transforming the top and bottomlines into an arrow
+    &--is-clicked span:before {
+      transform: rotate(-27deg);
+      width: 20px;
+      top: -5px;
+    }
+
+    &--is-clicked span:after {
+      transform: rotate(27deg);
+      width: 20px;
+      bottom: -5px;
+    }
+  }
+
+  &__list {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+
+    li {
+      float: right;
+
+      &:first-child {
+        margin-right: 0.5rem;
+      }
+
+      a {
+        border: none; // remove border caused by typography
+        &:hover {
+          border-bottom-style: none; // remove border caused by typography
+        }
+
+        text-decoration: none;
+        color: $first-color;
+        display: block;
+        padding: 0;
+        margin: 0 0.27rem;
+
+        svg {
+          width: 35px;
+          height: 35px;
+          margin: 0;
+        }
+      }
+    }
+  }
+}
+
+// @media only screen and (max-width: 770px) {
+//   .navham {
+//     visibility: visible;
+//   }
+//   // .app-body .app-content {
+//   //   margin-top: 45px;
+//   // }
+// }
+
+// /*
+//   ##Device = Desktops
+//   ##Screen = 1281px to higher resolution desktops
+// */
+
+@media (min-width: 1281px) {
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  // .navbar {
+  //   width: 2.4rem;
+  //   &--hovered {
+  //     width: 10rem;
+  //   }
+  // }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .navbar {
+    width: 2.4rem;
+    &--hovered {
+      width: 10rem;
+    }
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  // .navbar {
+  //   width: 0;
+  //   margin-top: 45px;
+  //   &--hovered {
+  //     width: 10rem;
+  //   }
+  // }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .navham {
+    visibility: visible;
+  }
+  // .app-body .app-content {
+  //   margin-top: 45px;
+  // }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .navham {
+    visibility: visible;
+  }
+  // .app-body .app-content {
+  //   margin-top: 45px;
+  // }
+}

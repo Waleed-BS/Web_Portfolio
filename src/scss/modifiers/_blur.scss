@@ -1,0 +1,8 @@
+.is-blurred {
+  // filter: progid:DXImageTransform.Microsoft.Blur(PixelRadius='3');
+  // -webkit-filter: url(#blur-filter);
+  // filter: url(#blur-filter);
+  // -webkit-filter: bl/ur(3px);
+  filter: blur(1px);
+  // opacity: 0.5;
+}

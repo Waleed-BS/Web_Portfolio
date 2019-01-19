@@ -1,19 +1,30 @@
 import { createStore as reduxCreateStore } from 'redux'
 
 const reducer = (state, action) => {
-  if (action.type === `SET_HOVER`) {
+  // console.log('action', action)
+  // console.log('state', state)
+  if (action.type === 'SET_HOVER') {    
     return Object.assign({}, state, {
-      hover: action.isHovering,
+      isHovered: action.isHovered,
     })
-  } else if (action.type === `SET_ACTIVE`) {
+  } else if (action.type === 'SET_ACTIVE') {
     return Object.assign({}, state, {
-      active: action.isActive,
+      active: action.active,
+    })
+  } else if (action.type === 'TOGGLE_BUTTON') {
+    return Object.assign({}, state, {
+      isInfoDisplayed: !state.isInfoDisplayed,
     })
   }
   return state
 }
 
-const initialState = { isHovering: false, isActive: 'Home' }
+const initialState = {
+  isHovered: false,
+  active: 'Home',
+  isInfoDisplayed: false,
+}
 
 const createStore = () => reduxCreateStore(reducer, initialState)
+
 export default createStore
