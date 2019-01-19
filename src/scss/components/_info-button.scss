@@ -1,0 +1,50 @@
+.c-info-button {
+  color: rgb(255, 255, 255);
+  background-color: $first-color;
+  border: none;
+  border-radius: 100%;
+  cursor: pointer;
+  height: 4em;
+  outline: none;
+  position: absolute;
+  stroke: lighten(red, 20%);
+  transition: transform 0.4s 0.3s, right 0.4s, top 0.4s, background 0.2s, filter 0.2s, opacity 0.2s;
+  transition-timing-function: cubic-bezier(0.23, 1, 0.32, 1);
+  width: 4em;
+  z-index: $info-button-z-index; 
+  
+  &:hover {
+    // background: brighten(red, 50%);
+  }
+
+  svg {
+    height: 2.6em;
+    margin: -0.2em 0 0 0;
+    width: 2.6em;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -45%);
+  }
+}
+
+.c-info-button--is-active {
+  display: block;
+  visibility: visible;
+  animation: radial-shadow-pulse 1.2s infinite, radial-zoom-pulse 1.2s infinite;
+  transform: scale(1);
+
+  &:hover {
+    animation-name: none;
+  }
+}
+
+.c-info-button--is-fixed {
+  animation-name: none;
+  //background: $white-color;
+  //color: $first-color;
+  display: block;
+  visibility: visible;
+  transform: scale(0.6);
+}
+

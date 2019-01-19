@@ -1,0 +1,11 @@
+.fade-in {
+    @include fadeInAnimation;
+}
+
+.fade-in-2 {
+    @include fadeInAnimation2;
+}
+
+.fade-in-3 {
+    @include fadeInAnimation3;
+}

@@ -58,5 +58,8 @@ typings/
 .env
 
 # files created by gatsby's build
-.catch
+.cache
 public
+
+# VS Code workstation settings
+.vscode

@@ -1,0 +1,138 @@
+
+.navbar {
+  @include navAnimation(); 
+  background-color: $navbar-color;
+  display: inline-block;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 13rem;
+  height: 100vh;
+  overflow-x: hidden;
+  overflow-y: auto;
+  z-index: $navbar-z-index;
+  transition: filter .5s, opacity .5s, navAnimation();
+  // box-shadow: 4px 1px 19px 0px grey;
+
+
+  nav a {
+    margin: 0.5rem;
+    color: #fffdfdcc;
+    font-weight: bold;
+    text-decoration: none;
+    display: block;
+  }
+}
+
+// @media only screen and (max-width: 1700px) {
+//   .navbar {
+//     width: 10rem;
+//     // &--hovered {
+//     //   width: 11rem;
+//     // }
+//   }
+// }
+
+// @media only screen and (max-width: 1280px) {
+//   .navbar {
+//     width: 2.4rem;
+//     &--hovered {
+//       width: 10rem;
+//     }
+//   }
+// }
+
+// @media only screen and (max-width: 770px) {
+//   .navbar {
+//     width: 0;
+//     margin-top: 45px;
+//     &--hovered {
+//       width: 10rem;
+//     }
+//   }
+// }
+
+/* 
+  ##Device = Desktops
+  ##Screen = 1281px to higher resolution desktops
+*/
+
+@media (min-width: 1281px) {
+  
+  
+}
+
+/* 
+  ##Device = Laptops, Desktops
+  ##Screen = B/w 1025px to 1280px
+*/
+
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .navbar {
+    width: 10rem;
+    &--hovered {
+      width: 11rem;
+    }
+  }
+}
+
+/* 
+  ##Device = Tablets, Ipads (portrait)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  
+  .navbar {
+    width: 2.4rem;
+    &--hovered {
+      width: 10rem;
+    }
+  }
+  
+}
+
+/* 
+  ##Device = Tablets, Ipads (landscape)
+  ##Screen = B/w 768px to 1024px
+*/
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  
+  .navbar {
+    width: 0;
+    &--hovered {
+      width: 10rem;
+    }
+  }
+}
+
+/* 
+  ##Device = Low Resolution Tablets, Mobiles (Landscape)
+  ##Screen = B/w 481px to 767px
+*/
+
+@media (min-width: 481px) and (max-width: 767px) {
+  .navbar {
+    width: 0;
+    margin-top: 1em;
+    &--hovered {
+      width: 10rem;
+    }
+  }
+}
+
+/* 
+  ##Device = Most of the Smartphones Mobiles (Portrait)
+  ##Screen = B/w 320px to 479px
+*/
+
+@media (min-width: 320px) and (max-width: 480px) {
+   .navbar {
+    width: 0;
+    margin-top: 45px;
+    &--hovered {
+      width: 10rem;
+    }
+  }
+}

@@ -1,0 +1,9 @@
+a {
+  color: $white-color;
+  border-bottom: 1px dotted $white-color;
+  text-decoration: none;
+
+  &:hover {
+    border-bottom-style: solid;
+  }
+}

@@ -1,0 +1,13 @@
+.section {
+  &__md-heading {
+    font-weight: 300;
+    font-size: 2em;
+    letter-spacing: -0.03em;
+    &__span {
+        color: $first-color;
+    }
+  }
+}
+
+.toolbox {
+}

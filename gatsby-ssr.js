@@ -12,9 +12,12 @@ import { renderToString } from 'react-dom/server'
 
 import createStore from './src/state/createStore'
 
+// Replace the default server renderer. 
+// This is useful for integration with Redux, 
+// css-in-js libraries, etc. 
+// that need custom setups for server rendering.
 export const replaceRenderer = ({ bodyComponent, replaceBodyHTMLString }) => {
     const store = createStore()
-
     const ConnectedBody = () => (
         <Provider store={store}>
             {bodyComponent}
