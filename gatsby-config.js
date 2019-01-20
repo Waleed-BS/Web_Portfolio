@@ -17,8 +17,8 @@ module.exports = {
     {
       resolve: 'gatsby-plugin-manifest',
       options: {
-        name: "Waleed-bs",
-        short_name: "Waleed-bs",
+        name: "Waleed-BS",
+        short_name: "Waleed-BS",
         start_url: "/",
         background_color: "#262626",
         theme_color: "#262626",
