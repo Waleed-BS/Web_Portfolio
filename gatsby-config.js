@@ -70,25 +70,6 @@ module.exports = {
         ]
       },
     },
-    {
-      resolve: 'gatsby-plugin-offline',
-      options: {
-        runtimeCaching: [
-          {
-            // Use cacheFirst since these don't need to be revalidated (same RegExp
-            // and same reason as above)
-            urlPattern: /(\.js$|\.css$|\/static\/)/,
-            handler: `cacheFirst`,
-          },
-          {
-            // Add runtime caching of images.
-            urlPattern: /\.(?:png|jpg|jpeg|webp|svg|gif|tiff)$/,
-            handler: `fastest`,
-          },
-
-        ],
-        skipWaiting: false,
-      }
-    }
+    'gatsby-plugin-offline',  
   ],
 }
