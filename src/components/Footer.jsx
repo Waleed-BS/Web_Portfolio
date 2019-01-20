@@ -17,11 +17,11 @@ const Footer = ({ className }) => (
       </a>
       . Hosted on{' '}
       <a
-        href="https://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html"
+        href="https://www.netlify.com/"
         target="_blank"
         rel="noopener noreferrer"
       >
-         Amazon S3
+         Netlify
       </a>. The code is open source and available at{' '}
       <a
         href="https://github.com/Waleed-BS/Web_Portfolio"
