@@ -63,3 +63,6 @@ public
 
 # VS Code workstation settings
 .vscode
+
+# netlify 
+.netlify
