@@ -3,10 +3,13 @@ import { connect } from 'react-redux'
 import NavLinks from './NavLinks'
 
 class NavBar extends React.Component {
-
   componentDidMount() {
-    // fixes ios onMouseLeave problem
-    window.addEventListener('touchend', () => this.props.setHover(false))
+
+    var isPlatformIsIOS = /(iPad|iPhone|iPod)/g.test(navigator.userAgent)
+    // fixes closing navigation problem for iOS
+    if (isPlatformIsIOS) {
+      window.addEventListener('touchend', () => this.props.setHover(false))
+    }
   }
 
   render() {
