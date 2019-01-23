@@ -45,13 +45,18 @@
         line-height: 1.3em;
       }
     }
-
+            
+    
     &:last-child {
       // font-size: 0.85em;
       margin: 2em 0 1em;
     }
   }
-
+  
+  a { 
+    width: 9.8em; 
+  }
+  
   span {
     //font-size: 1.1em;
     color: $first-color;
@@ -75,7 +80,7 @@
   padding: 0.3em 0.3em; 
   border: none;
   border-radius: 0.2em;
-  display: inline-block;
+  // display: inline-block;
   // color: white;
   min-width: 8em;
   font-weight: bold;
