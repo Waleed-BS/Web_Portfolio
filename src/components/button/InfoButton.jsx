@@ -2,9 +2,7 @@ import React from 'react'
 import { connect } from 'react-redux'
 import PropTypes from 'prop-types'
 
-import { FaArrowRight, FaClose, FaInfo } from 'react-icons/lib/fa/'
-// import { FaArrowRight } from 'react-icons/lib/fa/'
-// import { MdClose } from 'react-icons/lib/md'
+import { FaArrowRight, FaWindowClose, FaInfo } from 'react-icons/fa'
 
 const InfoButton = ({
   topPx,
@@ -33,7 +31,7 @@ const InfoButton = ({
           <FaInfo />
         )
       ) : (
-        <FaClose />
+        <FaWindowClose />
       )}
     </button>
   )

@@ -1,8 +1,9 @@
 import React from 'react'
 import { Link } from 'gatsby'
+
 import Obfuscate from 'react-obfuscate'
-import { FaWrench, FaGraduationCap, FaCode } from 'react-icons/lib/fa'
-import { MdWork } from 'react-icons/lib/md'
+import { FaWrench, FaGraduationCap, FaCode } from 'react-icons/fa'
+import { MdWork } from 'react-icons/md'
 
 const ForHomePageContent = (
   <div className="remark-screen__message">

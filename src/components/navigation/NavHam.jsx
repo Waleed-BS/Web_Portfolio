@@ -1,9 +1,8 @@
 import React from 'react'
 import { connect } from 'react-redux'
 
-import FaMail from 'react-icons/lib/md/email'
-import FaLinkedIn from 'react-icons/lib/fa/linkedin-square'
-import FaGithub from 'react-icons/lib/fa/github'
+import { MdMail } from 'react-icons/md'
+import { FaLinkedin, FaGithub } from 'react-icons/fa'
 
 class NavHam extends React.Component {
   handleClick = () => {
@@ -26,7 +25,6 @@ class NavHam extends React.Component {
           }`}
           onClick={this.handleClick}
           onMouseLeave={this.handleMouseLeave}
-          href="/"
         >
           <span />
         </a>
@@ -47,12 +45,12 @@ class NavHam extends React.Component {
               rel="noreferrer noopener"
               href="https://linkedin.com/in/waleed-bs"
             >
-              <FaLinkedIn />
+              <FaLinkedin />
             </a>
           </li>
           <li>
             <a href="mailto:waleed-bs@live.com">
-              <FaMail />
+              <MdMail />
             </a>
           </li>
         </ul>

@@ -1,17 +1,18 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'gatsby'
-/* top-links icons */
-import FaInfoCircle from 'react-icons/lib/fa/info-circle'
-import FaGraduationCap from 'react-icons/lib/fa/graduation-cap'
-import FaWrench from 'react-icons/lib/fa/wrench'
-import MdWork from 'react-icons/lib/md/work'
-import FaCode from 'react-icons/lib/fa/code'
+
+import {
+  FaWrench,
+  FaGraduationCap,
+  FaCode,
+  FaLinkedin,
+  FaGithub,
+  FaInfoCircle
+} from 'react-icons/fa'
+import { MdWork, MdMail } from 'react-icons/md'
+
 import logo from '../../assets/images/logo.png'
-/* bottom-links icons */
-import FaMail from 'react-icons/lib/fa/envelope'
-import FaLinkedIn from 'react-icons/lib/fa/linkedin-square'
-import FaGithub from 'react-icons/lib/fa/github'
 
 class NavLinks extends React.Component {
   // set active to the clicked section
@@ -41,8 +42,8 @@ class NavLinks extends React.Component {
               className={'navlinks__list__item__link'}
               to="/"
               onClick={() => {
-                this.handleSetActive('about');
-                this.handleHover();
+                this.handleSetActive('about')
+                this.handleHover()
               }}
             >
               <img alt="logo" className={'logo logo--size'} src={logo} />
@@ -186,10 +187,11 @@ class NavLinks extends React.Component {
         <ul className={'navlinks__list bottom-links-list'}>
           <li className={'navlinks__list__item'}>
             <a
+              alt="email me"
               className={'navlinks__list__item__link'}
               href="mailto:waleed-bs@live.com"
             >
-              <FaMail />
+              <MdMail />
               <span
                 className={
                   'navlinks__list__item__link__section-name' +
@@ -208,14 +210,14 @@ class NavLinks extends React.Component {
               rel="noreferrer noopener"
               href="https://linkedin.com/in/waleed-bs"
             >
-              <FaLinkedIn />
+              <FaLinkedin />
               <span
                 className={
                   'navlinks__list__item__link__section-name' +
                   ' navlinks__list__item__link__section-name--bold'
                 }
               >
-                LinkedIn
+                Linkedin
               </span>
             </a>
           </li>

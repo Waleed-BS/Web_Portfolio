@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaClose } from 'react-icons/lib/fa/'; 
+
+import { FaWindowClose } from 'react-icons/fa'; 
 import Avatar from '../Avatar';
 
 const ToolBoxPopOver = ({ 
@@ -26,7 +27,7 @@ const ToolBoxPopOver = ({
         className="c-toolbox-popover__close"
         onClick={onClick}
       >
-        <FaClose />
+        <FaWindowClose />
       </button>
       <div className="c-toolbox-popover__text">
         <p className="c-toolbox-popover__description"
