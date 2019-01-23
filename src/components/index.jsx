@@ -2,27 +2,22 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { connect } from 'react-redux'
-require('typeface-exo-2')
 
-
-
-
-import NavHam from '../components/navigation/NavHam'
-import NavBar from '../components/navigation/NavBar'
+import NavHam from './navigation/NavHam'
+import NavBar from './navigation/NavBar'
 
 import RemarkScreenContainer from '../components/remark_screen/RemarkScreenContainer'
-import InfoButtonContainer from '../components/button/InfoButtonContainer'
+import InfoButtonContainer from './button/InfoButtonContainer'
 
-import Footer from '../components/Footer'
+import Footer from './Footer'
 
 import backgroundImage from '../assets/images/background-image.png'
 
 import '../scss/application.scss'
-
+require('typeface-exo-2')
 
 class Layout extends React.Component {
   setIsInfoDisplayed() {
-    // console.log(this.props.isInfoDisplayed)
     if (this.props.isInfoDisplayed === true) {
       this.props.setInfo(false)
     } else {
@@ -54,7 +49,11 @@ class Layout extends React.Component {
             className="background-image" 
             src={'https://images.pexels.com/photos/169573/pexels-photo-169573.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'} 
           /> */}
-          <img className="background-image" src={backgroundImage} />
+          <img
+            alt="Background"
+            className="background-image"
+            src={backgroundImage}
+          />
           {/* <img 
             className="background-image" 
             src={'https://images.pexels.com/photos/249798/pexels-photo-249798.png?auto=compress&cs=tinysrgb&dpr=2&h=750&w=1260'} 
@@ -63,7 +62,7 @@ class Layout extends React.Component {
           <main className={`main ${this.props.isHovered ? 'dec-opacity' : ''}`}>
             {/* <Main /> */}
             {/* URL is the filename of these React components in src/pages */}
-            {this.props.children()}
+            {this.props.children}
             {/* if stateless React component with children argument use: */}
             {/* {children()} */}
           </main>
@@ -71,7 +70,9 @@ class Layout extends React.Component {
 
         {this.props.location.pathname === '/' && (
           <div>
-            <Footer className={this.props.isInfoDisplayed ? 'dec-opacity' : ''} />
+            <Footer
+              className={this.props.isInfoDisplayed ? 'dec-opacity' : ''}
+            />
             <InfoButtonContainer
               locationPathName={this.props.location.pathname}
             />
@@ -105,13 +106,3 @@ const mapDispatchToProps = dispatch => {
 }
 
 export default connect(mapStateToProps, mapDispatchToProps)(Layout)
-
-export const query = graphql`
-  query SiteTitleQuery {
-    site {
-      siteMetadata {
-        title
-      }
-    }
-  }
-`

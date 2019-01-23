@@ -1,6 +1,5 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Link from 'gatsby-link'
 import PropTypes from 'prop-types'
 
 import { FaArrowRight, FaClose, FaInfo } from 'react-icons/lib/fa/'

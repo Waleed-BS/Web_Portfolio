@@ -4,9 +4,6 @@ import { connect } from 'react-redux'
 import RemarkScreen from './RemarkScreen'
 
 class RemarkScreenContainer extends React.Component {
-  constructor(props) {
-    super(props)
-  }
 
   componentDidMount() {
     this.initializeEscClosing()
@@ -15,7 +12,7 @@ class RemarkScreenContainer extends React.Component {
   initializeEscClosing() {
     if (typeof window !== 'undefined') {
       window.addEventListener('keydown', e => {
-        if (this.props.isInfoDisplayed && e.which == 27) {
+        if (this.props.isInfoDisplayed && e.which === 27) {
           this.props.toggleRemark()
         }
       })

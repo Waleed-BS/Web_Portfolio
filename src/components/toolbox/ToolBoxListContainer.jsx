@@ -1,7 +1,6 @@
 import React from 'react'
 import ToolBoxList from './ToolBoxList'
 import ToolBoxPopOver from './ToolBoxPopOver'
-import FaUser from 'react-icons/lib/fa/user'
 
 class ToolBoxListContainer extends React.Component {
   constructor(props) {
@@ -163,7 +162,7 @@ class ToolBoxListContainer extends React.Component {
   }
 
   windowKeyDownHandler(e) {
-    if (this.state.activatedItem && e.which == 27) {
+    if (this.state.activatedItem && e.which === 27) {
       this.deactivatePopOver()
     }
   }
@@ -203,8 +202,6 @@ class ToolBoxListContainer extends React.Component {
   }
 
   positionPopOver(anchor, popOver) {
-    const popWidth = 200
-    const popHeight = 100
     const body = document.querySelector('body')
 
     const spaceUnder =
@@ -215,13 +212,6 @@ class ToolBoxListContainer extends React.Component {
     const verticalPositionUnder = spaceUnder >= anchor.offsetTop ? true : false
     const horizontalPositionOnRight =
       spaceOnRight >= anchor.offsetLeft ? true : false
-
-    const verticalPosition = verticalPositionUnder
-      ? anchor.offsetTop
-      : anchor.offsetTop - popHeight + anchor.offsetHeight
-    const horizontalPosition = horizontalPositionOnRight
-      ? anchor.offsetLeft
-      : anchor.offsetLeft - popWidth + anchor.offsetWidth
 
     const topPx = verticalPositionUnder
       ? `${anchor.offsetTop + anchor.offsetHeight}px`

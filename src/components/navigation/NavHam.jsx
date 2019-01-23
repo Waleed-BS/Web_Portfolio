@@ -26,6 +26,7 @@ class NavHam extends React.Component {
           }`}
           onClick={this.handleClick}
           onMouseLeave={this.handleMouseLeave}
+          href="/"
         >
           <span />
         </a>

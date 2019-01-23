@@ -1,5 +1,5 @@
 import React from 'react'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 import Obfuscate from 'react-obfuscate'
 import { FaWrench, FaGraduationCap, FaCode } from 'react-icons/lib/fa'
 import { MdWork } from 'react-icons/lib/md'

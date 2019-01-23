@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import Link from 'gatsby-link'
+import { Link } from 'gatsby'
 /* top-links icons */
 import FaInfoCircle from 'react-icons/lib/fa/info-circle'
 import FaGraduationCap from 'react-icons/lib/fa/graduation-cap'
@@ -45,7 +45,7 @@ class NavLinks extends React.Component {
                 this.handleHover();
               }}
             >
-              <img className={'logo logo--size'} src={logo} />
+              <img alt="logo" className={'logo logo--size'} src={logo} />
             </Link>
           </li>
           <li
