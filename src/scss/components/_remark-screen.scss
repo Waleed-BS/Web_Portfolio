@@ -80,8 +80,9 @@
   padding: 0.3em 0.3em; 
   border: none;
   border-radius: 0.2em;
-  // display: inline-block;
-  // color: white;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
   min-width: 8em;
   font-weight: bold;
   text-transform: capitalize;
