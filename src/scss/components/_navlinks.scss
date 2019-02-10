@@ -50,27 +50,27 @@
 
       &__link {
         border: none; // remove border caused by typography
-        display: block; // give the link the full width of its container
-        padding: 1.1rem 0; // (padding works correctly only when display set to block)
+        padding: 1.1rem 0.5rem; // (padding works correctly only when display set to block)
         text-decoration: none;
         color: $navlinks-text-color;
-
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+  
         &:hover {
           border: none; // remove border caused by typography
         }
 
         &__section-name {
-          position: absolute; // so section name doesn't change its position when navbar gets smaller
-          margin-top: 1px; // to align it next to icons
-          margin-left: 10px; // margin away from icons
+          padding: 0em 0.5em;
           &--bold {
             font-weight: bold;
           }
         }
 
         svg {
+          // padding: 1em;
           color: $first-color;
-          margin-left: 0.6rem;
           height: 1.35rem;
           width: 1.35rem;
         }
@@ -99,50 +99,6 @@
   }
 }
 
-// @media only screen and (max-width: 1280px) {
-//   .navlinks {
-//     &:hover {
-//       .navlinks__list__item__link__section-name {
-//         display: initial;
-//       }
-//     }
-//     // hide logo
-//     .logo {
-//       // display: none;
-//     }
-//     &__list {
-//       &__item__link {
-//         // margin-left: 2rem;
-
-//         &__section-name {
-//           // display: none;
-//           :hover {
-//             display: unset;
-//           }
-//         }
-//         svg {
-//           // width: 100%;
-//           // margin: 0;
-//         }
-//       }
-//     }
-//   }
-// }
-
-// @media only screen and (max-width: 770px) {
-//   .navlinks {
-//     // ul {
-//     //   img {
-//     //     display: block;
-//     //     height: 140px;
-//     //     width: 140px;
-//     //   }
-//     // }
-//     .bottom-links-list {
-//       // display: none;
-//     }
-//   }
-// }
 
 /* 
   ##Device = Desktops
@@ -160,7 +116,6 @@
 */
 
 @media (min-width: 1025px) and (max-width: 1280px) {
-
 }
 
 /* 
@@ -169,7 +124,7 @@
 */
 
 @media (min-width: 768px) and (max-width: 1024px) {
-
+ 
 }
 
 /* 

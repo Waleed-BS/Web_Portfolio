@@ -85,8 +85,27 @@
   
   .navbar {
     width: 2.4rem;
+    
+    .navlinks__list__item__link {
+      display: block;
+      // hide section-name when navigatoin is not hovered
+      &__section-name {
+        visibility: hidden;
+      }
+      
+      svg {
+        margin-left: 0;
+      }
+    }
+
     &--hovered {
       width: 10rem;
+      .navlinks__list__item__link {
+        display: flex;
+        .navlinks__list__item__link__section-name {
+          visibility: unset;
+        }
+      }
     }
   }
   
